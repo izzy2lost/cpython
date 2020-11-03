@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ef50a20b-590d-45b5-9a56-f804d43ad6b8}</ProjectGuid>
+    <RootNamespace>python33</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <WinMDAssembly>true</WinMDAssembly>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_WINRT_DLL;WIN32;Py_BUILD_CORE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Include;$(SolutionDir)..\PC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+      <AssemblyDebug>true</AssemblyDebug>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_WINRT_DLL;WIN32;Py_BUILD_CORE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Include;$(SolutionDir)..\PC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_WINRT_DLL;WIN32;Py_BUILD_CORE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Include;$(SolutionDir)..\PC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_WINRT_DLL;WIN32;Py_BUILD_CORE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Include;$(SolutionDir)..\PC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="python33.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Modules\arraymodule.c" />
+    <ClCompile Include="..\..\Modules\atexitmodule.c" />
+    <ClCompile Include="..\..\Modules\audioop.c" />
+    <ClCompile Include="..\..\Modules\binascii.c" />
+    <ClCompile Include="..\..\Modules\cmathmodule.c" />
+    <ClCompile Include="..\..\Modules\errnomodule.c" />
+    <ClCompile Include="..\..\Modules\faulthandler.c" />
+    <ClCompile Include="..\..\Modules\gcmodule.c" />
+    <ClCompile Include="..\..\Modules\getbuildinfo.c">
+      <PreprocessorDefinitions>HGBRANCH="win8app";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\itertoolsmodule.c" />
+    <ClCompile Include="..\..\Modules\main.c" />
+    <ClCompile Include="..\..\Modules\mathmodule.c" />
+    <ClCompile Include="..\..\Modules\md5module.c" />
+    <ClCompile Include="..\..\Modules\operator.c" />
+    <ClCompile Include="..\..\Modules\parsermodule.c" />
+    <ClCompile Include="..\..\Modules\posixmodule.c" />
+    <ClCompile Include="..\..\Modules\python.c" />
+    <ClCompile Include="..\..\Modules\rotatingtree.c" />
+    <ClCompile Include="..\..\Modules\sha1module.c" />
+    <ClCompile Include="..\..\Modules\sha256module.c" />
+    <ClCompile Include="..\..\Modules\sha512module.c" />
+    <ClCompile Include="..\..\Modules\signalmodule.c" />
+    <ClCompile Include="..\..\Modules\symtablemodule.c" />
+    <ClCompile Include="..\..\Modules\timemodule.c" />
+    <ClCompile Include="..\..\Modules\unicodedata.c" />
+    <ClCompile Include="..\..\Modules\winrtsocket.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAsWinRT>true</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zipimport.c" />
+    <ClCompile Include="..\..\Modules\zlibmodule.c">
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Modules\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\adler32.c" />
+    <ClCompile Include="..\..\Modules\zlib\compress.c" />
+    <ClCompile Include="..\..\Modules\zlib\crc32.c" />
+    <ClCompile Include="..\..\Modules\zlib\deflate.c" />
+    <ClCompile Include="..\..\Modules\zlib\inffast.c" />
+    <ClCompile Include="..\..\Modules\zlib\inflate.c" />
+    <ClCompile Include="..\..\Modules\zlib\inftrees.c" />
+    <ClCompile Include="..\..\Modules\zlib\trees.c" />
+    <ClCompile Include="..\..\Modules\zlib\uncompr.c" />
+    <ClCompile Include="..\..\Modules\zlib\zutil.c" />
+    <ClCompile Include="..\..\Modules\_bisectmodule.c" />
+    <ClCompile Include="..\..\Modules\_codecsmodule.c" />
+    <ClCompile Include="..\..\Modules\_collectionsmodule.c" />
+    <ClCompile Include="..\..\Modules\_csv.c" />
+    <ClCompile Include="..\..\Modules\_datetimemodule.c" />
+    <ClCompile Include="..\..\Modules\_functoolsmodule.c" />
+    <ClCompile Include="..\..\Modules\_heapqmodule.c" />
+    <ClCompile Include="..\..\Modules\_io\bufferedio.c" />
+    <ClCompile Include="..\..\Modules\_io\bytesio.c" />
+    <ClCompile Include="..\..\Modules\_io\fileio.c" />
+    <ClCompile Include="..\..\Modules\_io\iobase.c" />
+    <ClCompile Include="..\..\Modules\_io\stringio.c" />
+    <ClCompile Include="..\..\Modules\_io\textio.c" />
+    <ClCompile Include="..\..\Modules\_io\_iomodule.c" />
+    <ClCompile Include="..\..\Modules\_json.c" />
+    <ClCompile Include="..\..\Modules\_localemodule.c" />
+    <ClCompile Include="..\..\Modules\_lsprof.c" />
+    <ClCompile Include="..\..\Modules\_math.c" />
+    <ClCompile Include="..\..\Modules\_pickle.c" />
+    <ClCompile Include="..\..\Modules\_randommodule.c" />
+    <ClCompile Include="..\..\Modules\_sre.c" />
+    <ClCompile Include="..\..\Modules\_struct.c" />
+    <ClCompile Include="..\..\Modules\_threadmodule.c" />
+    <ClCompile Include="..\..\Modules\_weakref.c" />
+    <ClCompile Include="..\..\Objects\abstract.c" />
+    <ClCompile Include="..\..\Objects\accu.c" />
+    <ClCompile Include="..\..\Objects\boolobject.c" />
+    <ClCompile Include="..\..\Objects\bytearrayobject.c" />
+    <ClCompile Include="..\..\Objects\bytesobject.c" />
+    <ClCompile Include="..\..\Objects\bytes_methods.c" />
+    <ClCompile Include="..\..\Objects\capsule.c" />
+    <ClCompile Include="..\..\Objects\cellobject.c" />
+    <ClCompile Include="..\..\Objects\classobject.c" />
+    <ClCompile Include="..\..\Objects\codeobject.c" />
+    <ClCompile Include="..\..\Objects\complexobject.c" />
+    <ClCompile Include="..\..\Objects\descrobject.c" />
+    <ClCompile Include="..\..\Objects\dictobject.c" />
+    <ClCompile Include="..\..\Objects\enumobject.c" />
+    <ClCompile Include="..\..\Objects\exceptions.c" />
+    <ClCompile Include="..\..\Objects\fileobject.c" />
+    <ClCompile Include="..\..\Objects\floatobject.c" />
+    <ClCompile Include="..\..\Objects\frameobject.c" />
+    <ClCompile Include="..\..\Objects\funcobject.c" />
+    <ClCompile Include="..\..\Objects\genobject.c" />
+    <ClCompile Include="..\..\Objects\iterobject.c" />
+    <ClCompile Include="..\..\Objects\listobject.c" />
+    <ClCompile Include="..\..\Objects\longobject.c" />
+    <ClCompile Include="..\..\Objects\memoryobject.c" />
+    <ClCompile Include="..\..\Objects\methodobject.c" />
+    <ClCompile Include="..\..\Objects\moduleobject.c" />
+    <ClCompile Include="..\..\Objects\namespaceobject.c" />
+    <ClCompile Include="..\..\Objects\object.c" />
+    <ClCompile Include="..\..\Objects\obmalloc.c" />
+    <ClCompile Include="..\..\Objects\rangeobject.c" />
+    <ClCompile Include="..\..\Objects\setobject.c" />
+    <ClCompile Include="..\..\Objects\sliceobject.c" />
+    <ClCompile Include="..\..\Objects\structseq.c" />
+    <ClCompile Include="..\..\Objects\tupleobject.c" />
+    <ClCompile Include="..\..\Objects\typeobject.c" />
+    <ClCompile Include="..\..\Objects\unicodectype.c" />
+    <ClCompile Include="..\..\Objects\unicodeobject.c" />
+    <ClCompile Include="..\..\Objects\weakrefobject.c" />
+    <ClCompile Include="..\..\Parser\acceler.c" />
+    <ClCompile Include="..\..\Parser\bitset.c" />
+    <ClCompile Include="..\..\Parser\firstsets.c" />
+    <ClCompile Include="..\..\Parser\grammar.c" />
+    <ClCompile Include="..\..\Parser\grammar1.c" />
+    <ClCompile Include="..\..\Parser\listnode.c" />
+    <ClCompile Include="..\..\Parser\metagrammar.c" />
+    <ClCompile Include="..\..\Parser\myreadline.c" />
+    <ClCompile Include="..\..\Parser\node.c" />
+    <ClCompile Include="..\..\Parser\parser.c" />
+    <ClCompile Include="..\..\Parser\parsetok.c" />
+    <ClCompile Include="..\..\Parser\pgen.c" />
+    <ClCompile Include="..\..\Parser\printgrammar.c" />
+    <ClCompile Include="..\..\Parser\tokenizer.c" />
+    <ClCompile Include="..\..\PC\config.c" />
+    <ClCompile Include="..\..\PC\dl_nt.c" />
+    <ClCompile Include="..\..\PC\getpathp.c" />
+    <ClCompile Include="..\..\PC\winreg.c" />
+    <ClCompile Include="..\..\Python\asdl.c" />
+    <ClCompile Include="..\..\Python\ast.c" />
+    <ClCompile Include="..\..\Python\bltinmodule.c" />
+    <ClCompile Include="..\..\Python\ceval.c" />
+    <ClCompile Include="..\..\Python\codecs.c" />
+    <ClCompile Include="..\..\Python\compile.c" />
+    <ClCompile Include="..\..\Python\dtoa.c" />
+    <ClCompile Include="..\..\Python\dynamic_annotations.c" />
+    <ClCompile Include="..\..\Python\dynload_win.c" />
+    <ClCompile Include="..\..\Python\errors.c" />
+    <ClCompile Include="..\..\Python\fileutils.c" />
+    <ClCompile Include="..\..\Python\formatter_unicode.c" />
+    <ClCompile Include="..\..\Python\frozen.c" />
+    <ClCompile Include="..\..\Python\future.c" />
+    <ClCompile Include="..\..\Python\getargs.c" />
+    <ClCompile Include="..\..\Python\getcompiler.c" />
+    <ClCompile Include="..\..\Python\getcopyright.c" />
+    <ClCompile Include="..\..\Python\getopt.c" />
+    <ClCompile Include="..\..\Python\getplatform.c" />
+    <ClCompile Include="..\..\Python\getversion.c" />
+    <ClCompile Include="..\..\Python\graminit.c" />
+    <ClCompile Include="..\..\Python\import.c" />
+    <ClCompile Include="..\..\Python\importdl.c" />
+    <ClCompile Include="..\..\Python\marshal.c" />
+    <ClCompile Include="..\..\Python\modsupport.c" />
+    <ClCompile Include="..\..\Python\mysnprintf.c" />
+    <ClCompile Include="..\..\Python\mystrtoul.c" />
+    <ClCompile Include="..\..\Python\peephole.c" />
+    <ClCompile Include="..\..\Python\pyarena.c" />
+    <ClCompile Include="..\..\Python\pyctype.c" />
+    <ClCompile Include="..\..\Python\pyfpe.c" />
+    <ClCompile Include="..\..\Python\pymath.c" />
+    <ClCompile Include="..\..\Python\pystate.c" />
+    <ClCompile Include="..\..\Python\pystrcmp.c" />
+    <ClCompile Include="..\..\Python\pystrtod.c" />
+    <ClCompile Include="..\..\Python\Python-ast.c" />
+    <ClCompile Include="..\..\Python\pythonrun.c" />
+    <ClCompile Include="..\..\Python\pytime.c" />
+    <ClCompile Include="..\..\Python\random.c" />
+    <ClCompile Include="..\..\Python\structmember.c" />
+    <ClCompile Include="..\..\Python\symtable.c" />
+    <ClCompile Include="..\..\Python\sysmodule.c" />
+    <ClCompile Include="..\..\Python\thread.c" />
+    <ClCompile Include="..\..\Python\traceback.c" />
+    <ClCompile Include="..\..\Python\_warnings.c" />
+    <ClCompile Include="python33.cpp">
+      <CompileAs>Default</CompileAs>
+      <CompileAsWinRT>true</CompileAsWinRT>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

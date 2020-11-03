@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "python34app", "python34app\python34app.vcxproj", "{8AC701D7-F07A-442A-9CDA-EC412F4D9307}"
+	ProjectSection(ProjectDependencies) = postProject
+		{17CBD60F-E890-4473-940B-5ABFB2190192} = {17CBD60F-E890-4473-940B-5ABFB2190192}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "python34", "python34\python34.vcxproj", "{17CBD60F-E890-4473-940B-5ABFB2190192}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Debug|ARM.ActiveCfg = Debug|ARM
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Debug|ARM.Build.0 = Debug|ARM
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Debug|Win32.Build.0 = Debug|Win32
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Debug|x64.ActiveCfg = Debug|x64
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Debug|x64.Build.0 = Debug|x64
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Release|ARM.ActiveCfg = Release|ARM
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Release|ARM.Build.0 = Release|ARM
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Release|Win32.ActiveCfg = Release|Win32
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Release|Win32.Build.0 = Release|Win32
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Release|x64.ActiveCfg = Release|x64
+		{8AC701D7-F07A-442A-9CDA-EC412F4D9307}.Release|x64.Build.0 = Release|x64
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Debug|ARM.ActiveCfg = Debug|ARM
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Debug|ARM.Build.0 = Debug|ARM
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Debug|ARM.Deploy.0 = Debug|ARM
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Debug|Win32.ActiveCfg = Debug|Win32
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Debug|Win32.Build.0 = Debug|Win32
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Debug|Win32.Deploy.0 = Debug|Win32
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Debug|x64.ActiveCfg = Debug|x64
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Debug|x64.Build.0 = Debug|x64
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Debug|x64.Deploy.0 = Debug|x64
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Release|ARM.ActiveCfg = Release|ARM
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Release|ARM.Build.0 = Release|ARM
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Release|ARM.Deploy.0 = Release|ARM
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Release|Win32.ActiveCfg = Release|Win32
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Release|Win32.Build.0 = Release|Win32
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Release|Win32.Deploy.0 = Release|Win32
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Release|x64.ActiveCfg = Release|x64
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Release|x64.Build.0 = Release|x64
+		{17CBD60F-E890-4473-940B-5ABFB2190192}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B9CD3CE-15F2-4EF5-AC79-78E517940F07}
+	EndGlobalSection
+EndGlobal
