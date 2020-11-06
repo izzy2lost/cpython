@@ -1,0 +1,29 @@
+﻿<UserControl
+    x:Class="python34app.Privacy"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:python34app"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="500"
+    d:DesignWidth="346" Width="343">
+    
+    <Grid>
+        <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Top" Margin="10,10" >
+
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                <Button Style="{StaticResource BackButtonStyle}" Click="do_close" Height="49" Width="49" Margin="0,0">
+                    <AutomationProperties.Name>Close</AutomationProperties.Name>
+                </Button>
+
+                <TextBlock Style="{StaticResource SubheaderTextStyle}" Margin="20,0" Text="Privacy Declaration"/>
+            </StackPanel>
+            <TextBlock Style="{StaticResource ItemTextStyle}" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Grid.Row="1" TextWrapping="Wrap" Height="361">
+                This interactive Python interpreter supports connections to the internet using the socket module. Data is transmitted to the internet only if if this
+                socket module is used (either directly, or indirectly e.g. through the urllib module). On its own, this app will not attempt to collect personal information.
+            </TextBlock>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
