@@ -1,0 +1,3 @@
+[submodule "UWP/Libraries/Pygame/Source"]
+	path = UWP/Libraries/Pygame/Source
+	url = https://github.com/pygame/pygame
