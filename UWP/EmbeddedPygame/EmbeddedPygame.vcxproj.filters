@@ -35,4 +35,14 @@
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL_winrt_main_NonXAML.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL2-WinRTResource_BlankCursor.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL2-WinRTResources.rc" />
+  </ItemGroup>
 </Project>

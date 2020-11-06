@@ -158,6 +158,8 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>..\Libraries\SDL2\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -179,6 +181,63 @@
     <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Image Include="Assets\StoreLogo.png" />
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL_winrt_main_NonXAML.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL2-WinRTResource_BlankCursor.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL2-WinRTResources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_gfx\VisualC-WinRT\UWP_VS2015\SDL_gfx-UWP\SDL_gfx-UWP.vcxproj">
+      <Project>{341226af-8fff-401f-9002-63cba6132bea}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_image\VisualC-WinRT\UWP_VS2015\jpeg-WinRT81.vcxproj">
+      <Project>{2e908ad5-95e9-4b2d-bd6e-ba3ea4c1a2ee}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_image\VisualC-WinRT\UWP_VS2015\libpng-WinRT81.vcxproj">
+      <Project>{5fbdc49a-7939-40f9-b78e-975f190adbd3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_image\VisualC-WinRT\UWP_VS2015\libwebp-WinRT81.vcxproj">
+      <Project>{1eb035a3-815a-4382-90d3-4510ab605ad9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_image\VisualC-WinRT\UWP_VS2015\SDL_image-WinRT81.vcxproj">
+      <Project>{29b4d11f-59f3-4ebc-a769-3babd140db9a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_image\VisualC-WinRT\UWP_VS2015\zlib-WinRT81.vcxproj">
+      <Project>{acea4101-6f4a-44ed-9ec1-289821dac711}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_mixer\VisualC-WinRT\UWP_VS2015\libogg_dynamic-UWP.vcxproj">
+      <Project>{b14f8b7f-c9ff-4fd3-b328-7c68ab801e85}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_mixer\VisualC-WinRT\UWP_VS2015\libvorbisfile_dynamic-UWP.vcxproj">
+      <Project>{70ef3b8f-6aaf-401b-9818-3371e950e73c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_mixer\VisualC-WinRT\UWP_VS2015\libvorbis_dynamic-UWP.vcxproj">
+      <Project>{6b6c1f59-6a82-4097-8907-04df5c95d014}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_mixer\VisualC-WinRT\UWP_VS2015\SDL_mixer-UWP.vcxproj">
+      <Project>{18665277-e558-4484-93f4-e4dc7bb614cb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_net\VisualC-WinRT\UWP_VS2015\SDL_net-UWP\SDL_net-UWP.vcxproj">
+      <Project>{3b8321df-b538-4009-a4a2-d76ab4e7e8f1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_ttf\VisualC-WinRT\UWP_VS2015\freetype-WinRT81.vcxproj">
+      <Project>{1264471f-847f-427d-8db6-b733f188ffb9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL2_ttf\VisualC-WinRT\UWP_VS2015\SDL_ttf-WinRT81.vcxproj">
+      <Project>{90ca40dc-84b4-4d06-91d1-dc82a7a1e4d0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\SDL2\SDL\VisualC-WinRT\UWP_VS2015\SDL-UWP.vcxproj">
+      <Project>{89e9b32e-a86a-47c3-a948-d2b1622925ce}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\python34\python34.vcxproj">
+      <Project>{17cbd60f-e890-4473-940b-5abfb2190192}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
