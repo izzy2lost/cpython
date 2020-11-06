@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="freetype">
+      <UniqueIdentifier>{fb552ab1-dafc-41f3-b8b0-538f42b5e9e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\src_c\_freetype.c" />
+    <ClCompile Include="..\..\Source\src_c\freetype\ft_cache.c">
+      <Filter>freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\src_c\freetype\ft_layout.c">
+      <Filter>freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\src_c\freetype\ft_render.c">
+      <Filter>freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\src_c\freetype\ft_render_cb.c">
+      <Filter>freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\src_c\freetype\ft_unicode.c">
+      <Filter>freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\src_c\freetype\ft_wrap.c">
+      <Filter>freetype</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
