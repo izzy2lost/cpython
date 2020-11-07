@@ -295,7 +295,7 @@ void PyShell::disable_input()
     current_input = nullptr;
 }
 
-PyObject* PyShell::try_compile()
+PyObject* PyShell::try_compile() 
 {
     PyGILState_STATE s = PyGILState_Ensure();
     PyObject *code = PyObject_CallMethod(metrosetup, "compile", "u", command->Data());

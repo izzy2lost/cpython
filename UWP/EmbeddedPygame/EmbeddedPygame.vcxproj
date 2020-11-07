@@ -158,7 +158,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>..\Libraries\SDL2\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\Libraries\Pygame\Source\src_c;$(ProjectDir)\..\..\\Include;$(ProjectDir)\..\..\PC;$(ProjectDir)\..\Libraries\SDL2\SDL\include;$(ProjectDir)\..\Libraries\SDL2\SDL2_gfx;$(ProjectDir)\..\Libraries\SDL2\SDL2_image;$(ProjectDir)\..\Libraries\SDL2\SDL2_image\external\jpeg-9b;$(ProjectDir)\..\Libraries\SDL2\SDL2_image\external\libpng-1.6.37;$(ProjectDir)\..\Libraries\SDL2\SDL2_image\external\libwebp-1.0.2\src;$(ProjectDir)\..\Libraries\SDL2\SDL2_mixer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -175,6 +175,31 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
+    <Image Include="Assets\Pygame\data\alien1.gif" />
+    <Image Include="Assets\Pygame\data\alien1.jpg" />
+    <Image Include="Assets\Pygame\data\alien1.png" />
+    <Image Include="Assets\Pygame\data\alien2.gif" />
+    <Image Include="Assets\Pygame\data\alien2.png" />
+    <Image Include="Assets\Pygame\data\alien3.gif" />
+    <Image Include="Assets\Pygame\data\alien3.png" />
+    <Image Include="Assets\Pygame\data\arraydemo.bmp" />
+    <Image Include="Assets\Pygame\data\asprite.bmp" />
+    <Image Include="Assets\Pygame\data\background.gif" />
+    <Image Include="Assets\Pygame\data\BGR.png" />
+    <Image Include="Assets\Pygame\data\bomb.gif" />
+    <Image Include="Assets\Pygame\data\brick.png" />
+    <Image Include="Assets\Pygame\data\chimp.bmp" />
+    <Image Include="Assets\Pygame\data\city.png" />
+    <Image Include="Assets\Pygame\data\danger.gif" />
+    <Image Include="Assets\Pygame\data\explosion1.gif" />
+    <Image Include="Assets\Pygame\data\fist.bmp" />
+    <Image Include="Assets\Pygame\data\laplacian.png" />
+    <Image Include="Assets\Pygame\data\liquid.bmp" />
+    <Image Include="Assets\Pygame\data\midikeys.png" />
+    <Image Include="Assets\Pygame\data\oldplayer.gif" />
+    <Image Include="Assets\Pygame\data\player1.gif" />
+    <Image Include="Assets\Pygame\data\shot.gif" />
+    <Image Include="Assets\Pygame\data\static.png" />
     <Image Include="Assets\SplashScreen.scale-200.png" />
     <Image Include="Assets\Square150x150Logo.scale-200.png" />
     <Image Include="Assets\Square44x44Logo.scale-200.png" />
@@ -188,11 +213,113 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL2-WinRTResource_BlankCursor.cur" />
+    <None Include="Assets\Pygame\aliens.py">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Assets\Pygame\data\blue.mpg" />
+    <None Include="Assets\Pygame\data\house_lo.ogg" />
+    <None Include="Assets\Pygame\data\yuv_1.pgm" />
+    <None Include="python34app.zip">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL2-WinRTResources.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\base\base.vcxproj">
+      <Project>{18e2ed5c-bb4d-4668-9c38-4950840e7c51}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\bufferproxy\bufferproxy.vcxproj">
+      <Project>{cdf9b29e-9cc8-4541-8608-d55537e59851}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\color\color.vcxproj">
+      <Project>{6b6fa6f8-1c5c-45e8-8520-45580a8f4309}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\constants\constants.vcxproj">
+      <Project>{53ffab64-62e1-4eac-b9d9-94319a52388b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\display\display.vcxproj">
+      <Project>{ae54f504-eb7f-4450-9794-4f107f5a70a0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\draw\draw.vcxproj">
+      <Project>{b030cf84-47ca-4a0a-85e7-141c8c08c962}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\event\event.vcxproj">
+      <Project>{ddb5c628-fc2c-4411-ab99-5ef948a760a1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\fastevent\fastevent.vcxproj">
+      <Project>{59670036-7f5a-4814-862a-795ef0c808ec}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\font\font.vcxproj">
+      <Project>{65686bdb-bbcf-47de-b1c1-b979f26295e6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\gfxdraw\gfxdraw.vcxproj">
+      <Project>{cb45c553-5ddb-4eb5-bf1a-d9ec71847e0d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\imageext\imageext.vcxproj">
+      <Project>{0ee9ed52-fd17-4e40-9bb2-e6adc257da49}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\image\image.vcxproj">
+      <Project>{6a449d8a-bcac-4f3b-8328-f95b87ff9c08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\joystick\joystick.vcxproj">
+      <Project>{820cb7ba-fad0-40ff-a64b-b73d1f3b8e43}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\key\key.vcxproj">
+      <Project>{7e9181c5-d8b7-44fd-b9a0-58000b0d4e6e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\mask\mask.vcxproj">
+      <Project>{4c15363e-47af-4324-b148-e7816947e81a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\math\math.vcxproj">
+      <Project>{4300d238-7637-4bc4-925f-6d55072d9e24}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\mixer\mixer.vcxproj">
+      <Project>{ca3803d3-3fbb-4075-9754-603ff3eae4e1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\mixer_music\mixer_music.vcxproj">
+      <Project>{cc6c88e5-5802-4e41-9a48-be2070e099e2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\mouse\mouse.vcxproj">
+      <Project>{e35f7be8-aec9-42a9-9cc0-10f069c6d4f2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\newbuffer\newbuffer.vcxproj">
+      <Project>{543c6495-68ae-4b09-99bd-ea4dc6be67ab}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\pixelarray\pixelarray.vcxproj">
+      <Project>{65b74332-426f-4f63-9ca6-39e6473cf51f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\pixelcopy\pixelcopy.vcxproj">
+      <Project>{c3b54ff5-5de3-4d05-b55e-86d0e097d8b3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\rect\rect.vcxproj">
+      <Project>{ddbd16f6-999d-4a57-a634-24cf2041f1a9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\rwobject\rwobject.vcxproj">
+      <Project>{25fdec52-1e76-44eb-9ea1-2815e3f078c1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\scrap\scrap.vcxproj">
+      <Project>{9f001c17-a46f-4a91-b31e-b2155211e533}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\surface\surface.vcxproj">
+      <Project>{c71eda15-104a-425f-9baa-52c55f0e420f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\surflock\surflock.vcxproj">
+      <Project>{9f8edbeb-55c5-4dd5-890b-9a5e9d084dfe}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\time\time.vcxproj">
+      <Project>{5476cd81-db5f-450b-9f2d-be687ffc819c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\transform\transform.vcxproj">
+      <Project>{278af6e8-0638-47f5-8f79-2efa6085bd78}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\_freetype\_freetype.vcxproj">
+      <Project>{bcc2c781-c55e-488f-bda3-9a4e4f4a73ff}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\_sprite\_sprite.vcxproj">
+      <Project>{39137e36-fba8-417a-9ef5-3bd1c3351d25}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Libraries\SDL2\SDL2_gfx\VisualC-WinRT\UWP_VS2015\SDL_gfx-UWP\SDL_gfx-UWP.vcxproj">
       <Project>{341226af-8fff-401f-9002-63cba6132bea}</Project>
     </ProjectReference>
@@ -238,6 +365,18 @@
     <ProjectReference Include="..\python34\python34.vcxproj">
       <Project>{17cbd60f-e890-4473-940b-5abfb2190192}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Pygame\data\boom.wav" />
+    <Media Include="Assets\Pygame\data\car_door.wav" />
+    <Media Include="Assets\Pygame\data\house_lo.mp3" />
+    <Media Include="Assets\Pygame\data\house_lo.wav" />
+    <Media Include="Assets\Pygame\data\punch.wav" />
+    <Media Include="Assets\Pygame\data\secosmic_lo.wav" />
+    <Media Include="Assets\Pygame\data\whiff.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Assets\Pygame\data\sans.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

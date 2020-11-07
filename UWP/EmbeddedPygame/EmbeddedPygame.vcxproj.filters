@@ -8,6 +8,12 @@
       <UniqueIdentifier>02e0cd19-5f68-4c30-ab61-f434dc02c7c3</UniqueIdentifier>
       <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
     </Filter>
+    <Filter Include="Assets\Pygame">
+      <UniqueIdentifier>{da18e0af-3ff8-4ae9-80de-70474703a1a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Pygame\data">
+      <UniqueIdentifier>{b20bb115-617f-4a8d-8adb-8c555816297e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">
@@ -31,6 +37,81 @@
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
       <Filter>Assets</Filter>
     </Image>
+    <Image Include="Assets\Pygame\data\alien1.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\alien1.jpg">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\alien1.png">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\alien2.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\alien2.png">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\alien3.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\alien3.png">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\arraydemo.bmp">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\asprite.bmp">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\background.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\BGR.png">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\bomb.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\brick.png">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\chimp.bmp">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\city.png">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\danger.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\explosion1.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\fist.bmp">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\laplacian.png">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\liquid.bmp">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\midikeys.png">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\oldplayer.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\player1.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\shot.gif">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
+    <Image Include="Assets\Pygame\data\static.png">
+      <Filter>Assets\Pygame\data</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
@@ -41,8 +122,49 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL2-WinRTResource_BlankCursor.cur" />
+    <None Include="python34app.zip" />
+    <None Include="Assets\Pygame\aliens.py">
+      <Filter>Assets\Pygame</Filter>
+    </None>
+    <None Include="Assets\Pygame\data\blue.mpg">
+      <Filter>Assets\Pygame\data</Filter>
+    </None>
+    <None Include="Assets\Pygame\data\house_lo.ogg">
+      <Filter>Assets\Pygame\data</Filter>
+    </None>
+    <None Include="Assets\Pygame\data\yuv_1.pgm">
+      <Filter>Assets\Pygame\data</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL2-WinRTResources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Pygame\data\boom.wav">
+      <Filter>Assets\Pygame\data</Filter>
+    </Media>
+    <Media Include="Assets\Pygame\data\car_door.wav">
+      <Filter>Assets\Pygame\data</Filter>
+    </Media>
+    <Media Include="Assets\Pygame\data\house_lo.mp3">
+      <Filter>Assets\Pygame\data</Filter>
+    </Media>
+    <Media Include="Assets\Pygame\data\house_lo.wav">
+      <Filter>Assets\Pygame\data</Filter>
+    </Media>
+    <Media Include="Assets\Pygame\data\punch.wav">
+      <Filter>Assets\Pygame\data</Filter>
+    </Media>
+    <Media Include="Assets\Pygame\data\secosmic_lo.wav">
+      <Filter>Assets\Pygame\data</Filter>
+    </Media>
+    <Media Include="Assets\Pygame\data\whiff.wav">
+      <Filter>Assets\Pygame\data</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Assets\Pygame\data\sans.ttf">
+      <Filter>Assets\Pygame\data</Filter>
+    </Font>
   </ItemGroup>
 </Project>
