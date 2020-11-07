@@ -126,6 +126,9 @@ PyShell::PyShell()
     Windows::ApplicationModel::Package^ package = Windows::ApplicationModel::Package::Current;
     Windows::Storage::StorageFolder^ installedLocation = package->InstalledLocation;
     wcscpy_s(progpath, installedLocation->Path->Data());
+
+
+
     /* XXX how to determine executable name? */
     wcscat_s(progpath, L"\\python34app.exe");
     Py_SetProgramName(progpath);

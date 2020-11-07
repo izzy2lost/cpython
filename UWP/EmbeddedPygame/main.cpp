@@ -93,6 +93,12 @@ public:
     void initialize() {
 
         Py_Initialize();
+
+        metrosetup = PyImport_ImportModule("metrosetup");
+        if (metrosetup == NULL) {
+            PyErr_Print();
+        }
+
         /*PyEval_InitThreads();
 
         metrosetup = PyImport_ImportModule("metrosetup");
@@ -170,12 +176,23 @@ int main(int argc, char** argv)
 
     python_shell->initialize();
 
-    auto aliens_sample = readFile("Assets/Pygame/aliens.py");
+    //auto game_sample = readFile("Assets/Pygame/aliens.py");
+    auto game_sample = readFile("Assets/Pygame/liquid.py");
 
     //auto compiled = python_shell->try_compile(aliens_sample);
     //python_shell->run_code(compiled);
 
-    python_shell->run_string(L"import pygame.base");
+    /*python_shell->run_string(L"import imp");
+    python_shell->run_string(L"imp.load_dynamic('pygame.base', 'base.pyd')");
+    python_shell->run_string(L"import pygame.base");*/
+
+    //python_shell->run_string(L"import imp");
+    //python_shell->run_string(L"imp.load_dynamic('pygame.color', 'color.pyd')");
+    //python_shell->run_string(L"import pygame.color");
+
+    //python_shell->run_string(L"import pygame");
+
+    python_shell->run_string(game_sample);
 
     python_shell->deinitialize();
 

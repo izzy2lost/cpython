@@ -122,7 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Libraries\SDL2\SDL\src\main\winrt\SDL2-WinRTResource_BlankCursor.cur" />
-    <None Include="python34app.zip" />
     <None Include="Assets\Pygame\aliens.py">
       <Filter>Assets\Pygame</Filter>
     </None>
@@ -134,6 +133,10 @@
     </None>
     <None Include="Assets\Pygame\data\yuv_1.pgm">
       <Filter>Assets\Pygame\data</Filter>
+    </None>
+    <None Include="..\python34app\python34app.zip" />
+    <None Include="Assets\Pygame\liquid.py">
+      <Filter>Assets\Pygame</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
