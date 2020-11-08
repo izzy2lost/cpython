@@ -176,8 +176,8 @@ int main(int argc, char** argv)
 
     python_shell->initialize();
 
-    //auto game_sample = readFile("Assets/Pygame/aliens.py");
-    auto game_sample = readFile("Assets/Pygame/liquid.py");
+    auto aliens_sample = readFile("Assets/pygame/aliens.py");
+    auto liquid_sample = readFile("Assets/pygame/liquid.py");
 
     //auto compiled = python_shell->try_compile(aliens_sample);
     //python_shell->run_code(compiled);
@@ -192,7 +192,7 @@ int main(int argc, char** argv)
 
     //python_shell->run_string(L"import pygame");
 
-    python_shell->run_string(game_sample);
+    python_shell->run_string(aliens_sample);
 
     python_shell->deinitialize();
 

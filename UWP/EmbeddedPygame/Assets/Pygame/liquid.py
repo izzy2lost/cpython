@@ -18,7 +18,7 @@ import os
 from math import sin
 import time
 
-main_dir = "Assets/Pygame"
+main_dir = "Assets/pygame"
 
 
 def main():

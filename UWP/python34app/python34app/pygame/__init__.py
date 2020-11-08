@@ -28,10 +28,10 @@ import sys
 import os
 
 # Choose Windows display driver
-#if os.name == 'nt':
+if os.name == 'nt':
     #pypy does not find the dlls, so we add package folder to PATH.
-#    pygame_dir = os.path.split(__file__)[0]
-#    os.environ['PATH'] = os.environ['PATH'] + ';' + pygame_dir
+    pygame_dir = os.path.split(__file__)[0]
+    sys.path.append(pygame_dir)
 
 # when running under X11, always set the SDL window WM_CLASS to make the
 #   window managers correctly match the pygame window.
@@ -65,6 +65,11 @@ def unbulk_dyn_load(name):
     sys.modules["pygame." + name] = foo
     return foo
 
+def unbulk_dyn_load_package_name(module_name, package_name, extension_name):
+    foo = ExtensionFileLoader(package_name, extension_name).load_module()
+    sys.modules[module_name] = foo
+    return foo    
+
 # Mandatory
 base = unbulk_dyn_load("base")
 bufferproxy = unbulk_dyn_load("bufferproxy")
@@ -80,6 +85,10 @@ event = unbulk_dyn_load("event")
 fastevent = unbulk_dyn_load("fastevent")
 rwobject = unbulk_dyn_load("rwobject")
 
+imageext = unbulk_dyn_load_package_name("imageext", "pygame.imageext", "imageext.pyd")
+
+import pygame.imageext
+
 image = unbulk_dyn_load("image")
 joystick = unbulk_dyn_load("joystick")
 key = unbulk_dyn_load("key")
@@ -89,8 +98,6 @@ mouse = unbulk_dyn_load("mouse")
 newbuffer = unbulk_dyn_load("newbuffer")
 pixelarray = unbulk_dyn_load("pixelarray")
 pixelcopy = unbulk_dyn_load("pixelcopy")
-
-
 
 time = unbulk_dyn_load("time")
 transform = unbulk_dyn_load("transform")
@@ -103,7 +110,9 @@ transform = unbulk_dyn_load("transform")
 #imp.load_dynamic("pygame.sprite", "sprite.pyd")
 
 font = unbulk_dyn_load("font")
-#unbulk_dyn_load("imageext")
+
+#font = unbulk_dyn_load_package_name("pygame.font", "pygame._freetype", "_freetype.pyd")
+
 mixer = unbulk_dyn_load("mixer")
 mixer_music = unbulk_dyn_load("mixer_music")
 scrap = unbulk_dyn_load("scrap")
@@ -161,10 +170,27 @@ import pygame.bufferproxy
 BufferProxy = bufferproxy.BufferProxy
 import pygame.math 
 
-Vector2 = pygame.math.Vector2
-Vector3 = pygame.math.Vector3
+Vector2 = math.Vector2
+Vector3 = math.Vector3
+
+import pygame.sprite
 
 __version__ = ver
+
+
+# have dependencies on base import
+
+import _sdl2
+
+sprite = unbulk_dyn_load_package_name("sprite", "pygame._sprite", "_sprite.pyd")
+
+from pygame.surface import Surface, SurfaceType
+
+import pygame.sysfont
+
+font.SysFont = pygame.sysfont.SysFont
+font.get_fonts = pygame.sysfont.get_fonts
+font.match_font = pygame.sysfont.match_font
 
 """
 # next, the "standard" modules

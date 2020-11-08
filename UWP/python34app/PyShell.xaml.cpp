@@ -104,6 +104,7 @@ PyInit_metroui()
 /* XXX crash at shutdown. Work around by keeping reference to scrollView. */
 Windows::UI::Xaml::Controls::ScrollViewer^ scroll_tmp;
 static wchar_t progpath[1024];
+static std::wstring proghome;
 PyShell::PyShell()
 {
     InitializeComponent();
@@ -126,8 +127,10 @@ PyShell::PyShell()
     Windows::ApplicationModel::Package^ package = Windows::ApplicationModel::Package::Current;
     Windows::Storage::StorageFolder^ installedLocation = package->InstalledLocation;
     wcscpy_s(progpath, installedLocation->Path->Data());
+    
+    proghome = std::wstring(progpath);
 
-
+    Py_SetPythonHome((wchar_t*)proghome.c_str());
 
     /* XXX how to determine executable name? */
     wcscat_s(progpath, L"\\python34app.exe");

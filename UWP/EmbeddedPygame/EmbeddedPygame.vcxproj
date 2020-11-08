@@ -175,31 +175,81 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
-    <Image Include="Assets\Pygame\data\alien1.gif" />
-    <Image Include="Assets\Pygame\data\alien1.jpg" />
-    <Image Include="Assets\Pygame\data\alien1.png" />
-    <Image Include="Assets\Pygame\data\alien2.gif" />
-    <Image Include="Assets\Pygame\data\alien2.png" />
-    <Image Include="Assets\Pygame\data\alien3.gif" />
-    <Image Include="Assets\Pygame\data\alien3.png" />
-    <Image Include="Assets\Pygame\data\arraydemo.bmp" />
-    <Image Include="Assets\Pygame\data\asprite.bmp" />
-    <Image Include="Assets\Pygame\data\background.gif" />
-    <Image Include="Assets\Pygame\data\BGR.png" />
-    <Image Include="Assets\Pygame\data\bomb.gif" />
-    <Image Include="Assets\Pygame\data\brick.png" />
-    <Image Include="Assets\Pygame\data\chimp.bmp" />
-    <Image Include="Assets\Pygame\data\city.png" />
-    <Image Include="Assets\Pygame\data\danger.gif" />
-    <Image Include="Assets\Pygame\data\explosion1.gif" />
-    <Image Include="Assets\Pygame\data\fist.bmp" />
-    <Image Include="Assets\Pygame\data\laplacian.png" />
-    <Image Include="Assets\Pygame\data\liquid.bmp" />
-    <Image Include="Assets\Pygame\data\midikeys.png" />
-    <Image Include="Assets\Pygame\data\oldplayer.gif" />
-    <Image Include="Assets\Pygame\data\player1.gif" />
-    <Image Include="Assets\Pygame\data\shot.gif" />
-    <Image Include="Assets\Pygame\data\static.png" />
+    <Image Include="Assets\pygame\data\alien1.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\alien1.jpg">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\alien1.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\alien2.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\alien2.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\alien3.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\alien3.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\arraydemo.bmp">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\asprite.bmp">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\background.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\BGR.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\bomb.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\brick.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\chimp.bmp">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\city.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\danger.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\explosion1.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\fist.bmp">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\laplacian.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\liquid.bmp">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\midikeys.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\oldplayer.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\player1.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\shot.gif">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pygame\data\static.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Assets\SplashScreen.scale-200.png" />
     <Image Include="Assets\Square150x150Logo.scale-200.png" />
     <Image Include="Assets\Square44x44Logo.scale-200.png" />
@@ -216,13 +266,19 @@
     <None Include="..\python34app\python34app.zip">
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="Assets\Pygame\aliens.py">
+    <None Include="Assets\pygame\aliens.py">
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="Assets\Pygame\data\blue.mpg" />
-    <None Include="Assets\Pygame\data\house_lo.ogg" />
-    <None Include="Assets\Pygame\data\yuv_1.pgm" />
-    <None Include="Assets\Pygame\liquid.py">
+    <None Include="Assets\pygame\data\blue.mpg">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Assets\pygame\data\house_lo.ogg">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Assets\pygame\data\yuv_1.pgm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Assets\pygame\liquid.py">
       <DeploymentContent>true</DeploymentContent>
     </None>
   </ItemGroup>
@@ -305,6 +361,9 @@
     <ProjectReference Include="..\Libraries\Pygame\Extensions\scrap\scrap.vcxproj">
       <Project>{9f001c17-a46f-4a91-b31e-b2155211e533}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\sdl2\sdl2.vcxproj">
+      <Project>{eb9b147c-8bd0-451f-80e4-9ba1d99dfb76}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Libraries\Pygame\Extensions\surface\surface.vcxproj">
       <Project>{c71eda15-104a-425f-9baa-52c55f0e420f}</Project>
     </ProjectReference>
@@ -322,6 +381,9 @@
     </ProjectReference>
     <ProjectReference Include="..\Libraries\Pygame\Extensions\_sprite\_sprite.vcxproj">
       <Project>{39137e36-fba8-417a-9ef5-3bd1c3351d25}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Pygame\Extensions\_video\_video.vcxproj">
+      <Project>{cd488bfe-5b20-4a26-831b-53980a3fdd13}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Libraries\SDL2\SDL2_gfx\VisualC-WinRT\UWP_VS2015\SDL_gfx-UWP\SDL_gfx-UWP.vcxproj">
       <Project>{341226af-8fff-401f-9002-63cba6132bea}</Project>
@@ -370,16 +432,35 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\Pygame\data\boom.wav" />
-    <Media Include="Assets\Pygame\data\car_door.wav" />
-    <Media Include="Assets\Pygame\data\house_lo.mp3" />
-    <Media Include="Assets\Pygame\data\house_lo.wav" />
-    <Media Include="Assets\Pygame\data\punch.wav" />
-    <Media Include="Assets\Pygame\data\secosmic_lo.wav" />
-    <Media Include="Assets\Pygame\data\whiff.wav" />
+    <Media Include="Assets\pygame\data\boom.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\pygame\data\car_door.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\pygame\data\house_lo.mp3">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\pygame\data\house_lo.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\pygame\data\punch.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\pygame\data\secosmic_lo.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\pygame\data\whiff.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="Assets\Pygame\data\sans.ttf" />
+    <Font Include="Assets\pygame\data\sans.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="Assets\pygame\freesansbold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

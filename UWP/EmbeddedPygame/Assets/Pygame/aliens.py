@@ -42,7 +42,7 @@ ALIEN_RELOAD = 12  # frames between new aliens
 SCREENRECT = pg.Rect(0, 0, 640, 480)
 SCORE = 0
 
-main_dir = os.path.split(os.path.abspath(__file__))[0]
+main_dir = "Assets/pygame"
 
 
 def load_image(file):
@@ -54,20 +54,6 @@ def load_image(file):
     except pg.error:
         raise SystemExit('Could not load image "%s" %s' % (file, pg.get_error()))
     return surface.convert()
-
-
-def load_sound(file):
-    """ because pygame can be be compiled without mixer.
-    """
-    if not pg.mixer:
-        return None
-    file = os.path.join(main_dir, "data", file)
-    try:
-        sound = pg.mixer.Sound(file)
-        return sound
-    except pg.error:
-        print("Warning, unable to load, %s" % file)
-    return None
 
 
 # Each type of game object gets an init and an update function.
@@ -239,12 +225,9 @@ class Score(pg.sprite.Sprite):
 
 def main(winstyle=0):
     # Initialize pygame
-    if pg.get_sdl_version()[0] == 2:
-        pg.mixer.pre_init(44100, 32, 2, 1024)
     pg.init()
-    if pg.mixer and not pg.mixer.get_init():
-        print("Warning, no sound")
-        pg.mixer = None
+
+    pg.mixer = None
 
     fullscreen = False
     # Set the display mode
@@ -275,14 +258,6 @@ def main(winstyle=0):
         background.blit(bgdtile, (x, 0))
     screen.blit(background, (0, 0))
     pg.display.flip()
-
-    # load the sound effects
-    boom_sound = load_sound("boom.wav")
-    shoot_sound = load_sound("car_door.wav")
-    if pg.mixer:
-        music = os.path.join(main_dir, "data", "house_lo.wav")
-        pg.mixer.music.load(music)
-        pg.mixer.music.play(-1)
 
     # Initialize Game Groups
     aliens = pg.sprite.Group()
@@ -399,8 +374,7 @@ def main(winstyle=0):
         # cap the framerate at 40fps. Also called 40HZ or 40 times per second.
         clock.tick(40)
 
-    if pg.mixer:
-        pg.mixer.music.fadeout(1000)
+
     pg.time.wait(1000)
     pg.quit()
 
