@@ -5,11 +5,11 @@
 #include "Python.h"
 #include "structmember.h" /* offsetof */
 
-#ifndef WITH_THREAD
-#error "Error!  The rest of Python is not compiled with thread support."
-#error "Rerun configure, adding a --with-threads option."
-#error "Then run `make clean' followed by `make'."
-#endif
+#ifdef WITH_THREAD
+//#error "Error!  The rest of Python is not compiled with thread support."
+//#error "Rerun configure, adding a --with-threads option."
+//#error "Then run `make clean' followed by `make'."
+
 
 #include "pythread.h"
 
@@ -1404,3 +1404,4 @@ PyInit__thread(void)
     PyThread_init_thread();
     return m;
 }
+#endif

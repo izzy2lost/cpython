@@ -113,8 +113,9 @@ font = unbulk_dyn_load("font")
 
 #font = unbulk_dyn_load_package_name("pygame.font", "pygame._freetype", "_freetype.pyd")
 
-mixer = unbulk_dyn_load("mixer")
 mixer_music = unbulk_dyn_load("mixer_music")
+mixer = unbulk_dyn_load("mixer")
+
 scrap = unbulk_dyn_load("scrap")
 gfxdraw = unbulk_dyn_load("gfxdraw")
 
@@ -174,6 +175,8 @@ Vector2 = math.Vector2
 Vector3 = math.Vector3
 
 import pygame.sprite
+
+#import pygame.mixer
 
 __version__ = ver
 

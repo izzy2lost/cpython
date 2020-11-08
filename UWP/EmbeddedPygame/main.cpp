@@ -99,6 +99,7 @@ public:
             PyErr_Print();
         }
 
+
         /*PyEval_InitThreads();
 
         metrosetup = PyImport_ImportModule("metrosetup");
@@ -110,13 +111,13 @@ public:
     }
 
     void deinitialize() {
-        PyGILState_STATE s = PyGILState_Ensure();
+        //PyGILState_STATE s = PyGILState_Ensure();
         Py_Finalize();
     }
 
     PyObject* try_compile(const std::wstring& string_code)
     {
-        PyGILState_STATE s = PyGILState_Ensure();
+        //PyGILState_STATE s = PyGILState_Ensure();
         PyObject* code = PyObject_CallMethod(metrosetup, "compile", "u", string_code.c_str());
         if (code == NULL) {
             PyErr_Print();
@@ -126,13 +127,13 @@ public:
             Py_DECREF(code);
         }
 
-        PyGILState_Release(s);
+        //PyGILState_Release(s);
         return code;
     }
 
     void run_code(PyObject* code)
     {
-        PyGILState_STATE s = PyGILState_Ensure();
+        //PyGILState_STATE s = PyGILState_Ensure();
         PyObject* result = PyObject_CallMethod(metrosetup, "eval", "O", code);
         if (result == NULL) {
             PyErr_Print();
@@ -141,7 +142,7 @@ public:
             Py_DECREF(result);
         }
         Py_CLEAR(code);
-        PyGILState_Release(s);
+        //PyGILState_Release(s);
     }
 
     void run_string(const std::wstring& code) {
@@ -193,6 +194,8 @@ int main(int argc, char** argv)
     //python_shell->run_string(L"import pygame");
 
     python_shell->run_string(aliens_sample);
+    //PyEval_ReleaseThread(PyThreadState_Get());
+    
 
     python_shell->deinitialize();
 
