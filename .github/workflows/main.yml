@@ -17,13 +17,13 @@ jobs:
     runs-on: windows-2022
 
     env:
-      SolutionPath: "cpython/UWP/UWPApp.sln"
+      SolutionPath: "UWP/UWPApp.sln"
       Platform: x64
-      Configuration: Debug
+      Configuration: Release
       BuildMode: SideLoadOnly
       AppxBundle: Never
-      ProjectPath: "cpython/UWP/python34app/python34app.vcxproj"
-      ProjectDirectory: "cpython/UWP/python34app"
+      ProjectPath: "UWP/python34app/python34app.vcxproj"
+      ProjectDirectory: "UWP/python34app"
       PackageOutputRootDir: "D:\\a\\AppPackages"
       PackageOutputDir: "D:\\a\\XboxCpython"
 
