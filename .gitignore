@@ -408,7 +408,6 @@ libpython*.a
 libpython*.so*
 platform
 pybuilddir.txt
-pyconfig.h
 python
 python-config
 python-config.py
