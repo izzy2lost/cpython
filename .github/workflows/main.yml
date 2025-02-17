@@ -17,15 +17,15 @@ jobs:
     runs-on: windows-2022
 
     env:
-      SolutionPath: "UWP/UWPApp.sln"
+      SolutionPath: UWP/UWPApp.sln
       Platform: x64
       Configuration: Debug
       BuildMode: SideLoadOnly
       AppxBundle: Never
-      ProjectPath: "UWP/python34app/python34app.vcxproj"
-      ProjectDirectory: "UWP/python34app"
-      PackageOutputRootDir: "D:\\a\\AppPackages"
-      PackageOutputDir: "D:\\a\\XboxCpython"
+      ProjectPath: UWP/python34app/python34app.vcxproj
+      ProjectDirectory: .\UWP/python34app
+      PackageOutputRootDir: C:\AppPackage
+      PackageOutputDir: XboxCpython
 
     steps:
       - name: Checkout Repository
