@@ -89,7 +89,7 @@ jobs:
         shell: pwsh
 
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: IPy_Archive
           path: D:\a\AppPackages\cpy_Archive.zip
