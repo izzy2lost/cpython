@@ -29,12 +29,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
       - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1
+        uses: microsoft/setup-msbuild@v2
         
       - name: Generate Self-Signed Certificate
         id: generate_cert
@@ -93,5 +93,4 @@ jobs:
         with:
           name: IPy_Archive
           path: D:\a\AppPackages\cpy_Archive.zip
-
           
